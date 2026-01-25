@@ -51,7 +51,7 @@ define i1 @Object_IsA(%Object* %object, i8* %name) nounwind {
 	%7 = getelementptr %Object_vtable_type, %Object_vtable_type* %3, i32 0, i32 0
 
 	; while (object != null)
-	%8 = icmp ne %Object_vtable_type* %3, null
+	%8 = icmp ne %Object_vtable_type* %7, null
 	br i1 %8, label %.body, label %.exit_false
 
 .exit_true:
